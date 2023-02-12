@@ -5,4 +5,8 @@ public class Sorter{
     int b;
     double c;
     System.out.println(a+b+c);
+
+    if(a>=c){
+        return -1;
+    }
 }
