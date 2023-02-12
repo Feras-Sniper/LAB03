@@ -1,12 +1,20 @@
-import javax.sound.sampled.SourceDataLine;
-
 public class Sorter{
-    int a;
-    int b;
-    double c;
-    System.out.println(a+b+c);
+    public static void selectionSort(double[] list){
+        for(int i = 0; i < list.length - 1; i++){
+            double currentMin = list[i];
+            int currentMinIndex = i;
 
-    if(a>=c){
-        return -1;
+            for(int j = i + 1; j < list.length; j++){
+                if (currentMin > list[j]){
+                    currentMin = list[j];
+                    currentMinIndex = j;
+                }
+            }
+
+            if (currentMinIndex != i){
+                list[currentMinIndex] = list[i];
+                list[i] = currentMin;
+            }
+        }
     }
 }
